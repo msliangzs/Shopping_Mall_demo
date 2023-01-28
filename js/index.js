@@ -252,4 +252,13 @@ window.onload = function () {
             // console.log("x")
         }
     }
+
+    //商品详情数据渲染
+
+    function rightTopData() {
+        /**
+         * 1.查找rightTop元素
+         * 2.
+         */
+    }
 }

@@ -269,10 +269,6 @@
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop > p {
   float: right;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom {
-  width: 520px;
-  line-height: 28px;
-}
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom::after {
   clear: both;
   display: block;
@@ -280,17 +276,48 @@
 }
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom > span {
   float: left;
+  margin-right: 15px;
 }
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom p {
+  width: 520px;
+  line-height: 28px;
   float: left;
 }
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom p > span {
-  float: left;
   color: #999;
 }
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom p > span:first-child {
-  float: left;
   background: #c81623;
   padding: 3px;
   color: #fff;
+}
+#wrapper #content .contentMain #center #right .rightTop .support {
+  margin-top: 10px;
+  line-height: 28px;
+}
+#wrapper #content .contentMain #center #right .rightTop .support::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #content .contentMain #center #right .rightTop .support > span {
+  margin-right: 15px;
+  float: left;
+}
+#wrapper #content .contentMain #center #right .rightTop .support > p {
+  float: left;
+  color: #999;
+}
+#wrapper #content .contentMain #center #right .rightTop .address {
+  padding-bottom: 5px;
+  line-height: 28px;
+  margin-top: 10px;
+}
+#wrapper #content .contentMain #center #right .rightTop .address > span {
+  margin-right: 15px;
+  float: left;
+}
+#wrapper #content .contentMain #center #right .rightTop .address > p {
+  float: left;
+  color: #999;
 }
