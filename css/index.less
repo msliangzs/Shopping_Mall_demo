@@ -1,0 +1,367 @@
+//引入less文件 浮动布局后避免父元素高度塌陷
+@import 'mixins/clear.less';
+
+//最外层的包裹元素
+#wrapper{
+    //头部
+    #header{
+        //上半部分
+        .headTop{
+            background-color: #eaeaea;
+            height: 30px;
+            //版心元素
+            .headTopMain{
+                // 当子元素开启浮动定位 就会影响父元素的高度（高度塌陷）
+                //所以要加上overflow:hidden
+                //或者引入clearfix（）函数 首部import mixins/clearfix
+                //overflow: hidden;
+                .clearfix();
+                width: 1200px;
+                line-height: 30px;
+                //居中显示
+                margin: 0 auto;
+                //左边
+                .left{
+                    h5{
+                        // 想让两个标签到一个水平 用浮动！浮动到一个地方
+                        float: left; 
+                        margin-right: 5px;
+                    }
+                    p{
+                        float: left; 
+                        a{
+                            text-decoration: none;
+                            color: #706e70;
+                            // 只有第一个元素有竖线 所以引用&：第一个孩子
+                            &:first-child{
+                                border-right: 1px solid #b3aeb3;
+                                margin-right: 3px;
+                                padding: 4px;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    float: right; 
+                    nav{
+                        //a为行标签 默认字与字之间又间距
+                        //font-size:0px 去掉间距
+                        font-size:0px;
+                        a{
+                            text-decoration: none;
+                            color: #706e70;
+                            //只有最后一个孩子没有竖线
+                            &{
+                                border-right: 1px solid #b3aeb3;
+                                padding-right: 10px;
+                                margin-right: 10px;
+                                //去掉font-size字会消失 但是可以在子元素中重新加入
+                                font-size: 12px;
+                                &:last-child{
+                                    border: none;
+                                    margin-left: 0px;
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //下半部分
+        .headButtom{
+            width: 1200px;
+            // 居中
+            margin: 0 auto;
+            .clearfix();
+            //版心元素
+            .headButtomMain{
+                //logo
+                .logo{
+                    float: left;
+                    a{
+                        img{
+                            width: 60px;
+                            // logo外边距
+                            margin: 25px 45px;
+                        }
+                    }
+                }
+                //search
+                .search{
+                    float: right;
+                    margin-top: 35px;
+                    input{
+                        //文本按钮
+                        //边框盒子设置
+                        &:first-child{
+                            box-sizing: border-box;
+                            width: 490px;
+                            height: 32px;
+                            padding: 0px 4px;
+                            border: 3px solid #ea4a36;
+                            float: left;
+                        }
+                        //搜索按钮
+                        &:last-child{
+                            width: 68px;
+                            height: 32px;
+                            background-color: #ea4a36;
+                            // 文字颜色
+                            color: #fff;
+                            float: left;
+                            // 去掉边框
+                            border: none;
+                        }
+                        //修饰placeholder
+                        &::-webkit-input-placeholder{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //头部结束
+    //分类导航开始
+    #nav{
+        border-bottom: 2px solid #e1251b;
+        .navMain{
+            width: 1200px;
+            margin: 0 auto;
+            .clearfix();
+            a{
+                text-decoration: none;
+                margin: 0 22px;
+                font-size: 16px;
+                color: #333;
+                float: left;
+                line-height: 50px;
+                text-align: center;
+                &:first-child{
+                    width: 210px;
+                    height: 50px;
+                    background-color: #e1251b;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    float: left;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    //分类导航结束
+    // 内容开始
+    #content{
+        // 版心元素
+        margin-top: 15px;
+        .contentMain{
+            width: 1200px;
+            margin: 15px auto 0 auto;
+            //路径导航
+            .navPath{
+                padding: 9px 15px 9px 0px;
+                font-style: 0;
+                a{
+                    font-style: 12px;
+                }
+                i{
+                    padding: 0 5px;
+                    font-size: 12px;
+                }
+            }
+            //中间区域开始
+            #center{
+                margin: 5px 0 15px;
+                //左侧放大镜开始
+                #left{
+                    width: 400px;
+                    float: left;
+                    //上边
+                    #leftTop{ 
+                        width: 400px;
+                        // 自绝父相
+                        position: relative;
+                        //小图框
+                        #smallPic{
+                            width: 400px;
+                            height: 400px;
+                            border: 1px solid #DFDFDF;
+                            position: relative;
+                            img{
+
+                            }
+                            // 蒙版元素
+                            .mask{
+                                width: 200px;
+                                height: 200px;
+                                background: rgba(255,255 ,255 , 0.5);
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                left: 0px;
+                                top: 0px;
+
+                            }
+                        }
+                        //大图框
+                        #bigPic{
+                           width: 400px;
+                           height: 400px;
+                           border: 1px solid #ddd;
+                           left: 420px;
+                           top:0px;
+                           position: absolute;
+                           overflow: hidden;
+                            img{
+                                width: 800px;
+                                height: 800px;
+                                position:absolute;
+                            }
+                        }
+                    }
+                    #leftBottom{
+                        width: 400px;
+                        margin-top: 5px;
+                        a{
+                            float: left;
+                            width: 10px;
+                            height: 54px;
+                            border: 1px solid #ccc;
+                            background: #ebebeb;
+                            text-align: center;
+                            line-height: 54px;
+                            text-decoration:none;
+                            &:first-child{
+                                margin-right: 4px;
+                            }
+                        }
+                        #picList{
+                            float: left;
+                            width: 372px;
+                            height: 56px;
+                            overflow: hidden;
+                            position: relative;
+                            ul{
+                                //取消间距
+                                font-size:0px;
+                                //强制不换行
+                                white-space: nowrap;
+                                position: absolute;
+                                left: 0;
+                                transition: 0.5s;
+                                li{
+                                    font-size:12px;
+                                    width: 50px;
+                                    height: 50px;
+                                    border: 1px solid #ccc;
+                                    padding: 2px;
+                                    margin-right: 20px;
+                                    display: inline-block;
+                                    img{
+                                        width: 50px;
+                                        height: 50px;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //右侧商品详情区域开始
+                #right{
+                    width: 700px;
+                    float: right;
+                    //右边内容的上半部分开始
+                    .rightTop{
+                        h3{
+                            font-size: 14px;
+                            line-height: 21px;
+                            margin-top: 15px;
+                        }
+                        // 这个 > 意思是该样式仅影响此直接结点
+                        > p{
+                            color: #e12228;
+                            margin-top: 15px;
+                        }
+                        .priceWrap{
+                            margin-top: 10px;
+                            line-height: 28px;
+                            background: #fee9ec;
+                            padding: 7px;
+                            .priceTop{
+                                .clearfix();
+                                > span{
+                                    margin-right: 15px;
+                                    float: left;
+                                }
+                                .price{
+                                    float: left;
+                                    color: #cc1122;
+                                    > span{
+                                        float: left;
+                                        font-size: 16px;
+                                    }
+                                    p{
+                                        float: left;
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                    }
+                                    i{
+                                        float: left;
+                                        font-size: 12px;
+                                        color: #c12;
+                                    }
+                                }
+                                > p{
+                                    float: right;
+                                    >span{
+
+                                    }
+                                }
+
+                            }
+                            .priceButtom{
+                                width: 520px;
+                                line-height: 28px;
+                                .clearfix();
+                                //促销
+                                > span{
+                                    float: left;
+                                }
+                                //加价购
+                                p{
+                                    float: left;
+                                    > span{
+                                        float: left;
+                                            color: #999;
+                                            //加价购
+                                            &:first-child{
+                                                float: left;
+                                                background: #c81623;
+                                                padding: 3px;
+                                                color: #fff;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                        .support{
+                            > span{}
+                            > p{}
+                        }
+                        .address{
+                            > span{}
+                            > p{}
+                        }
+                    }
+                    //右边内容的下半部分开始
+                    .rightButtom{
+                        
+                    }
+                }
+            }
+        }
+    }
+    //内容结束
+}

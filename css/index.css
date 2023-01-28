@@ -1,0 +1,296 @@
+#wrapper #header .headTop {
+  background-color: #eaeaea;
+  height: 30px;
+}
+#wrapper #header .headTop .headTopMain {
+  width: 1200px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+#wrapper #header .headTop .headTopMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #header .headTop .headTopMain .left h5 {
+  float: left;
+  margin-right: 5px;
+}
+#wrapper #header .headTop .headTopMain .left p {
+  float: left;
+}
+#wrapper #header .headTop .headTopMain .left p a {
+  text-decoration: none;
+  color: #706e70;
+}
+#wrapper #header .headTop .headTopMain .left p a:first-child {
+  border-right: 1px solid #b3aeb3;
+  margin-right: 3px;
+  padding: 4px;
+}
+#wrapper #header .headTop .headTopMain .right {
+  float: right;
+}
+#wrapper #header .headTop .headTopMain .right nav {
+  font-size: 0px;
+}
+#wrapper #header .headTop .headTopMain .right nav a {
+  text-decoration: none;
+  color: #706e70;
+  border-right: 1px solid #b3aeb3;
+  padding-right: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+#wrapper #header .headTop .headTopMain .right nav a:last-child {
+  border: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+#wrapper #header .headButtom {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrapper #header .headButtom::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #header .headButtom .headButtomMain .logo {
+  float: left;
+}
+#wrapper #header .headButtom .headButtomMain .logo a img {
+  width: 60px;
+  margin: 25px 45px;
+}
+#wrapper #header .headButtom .headButtomMain .search {
+  float: right;
+  margin-top: 35px;
+}
+#wrapper #header .headButtom .headButtomMain .search input:first-child {
+  box-sizing: border-box;
+  width: 490px;
+  height: 32px;
+  padding: 0px 4px;
+  border: 3px solid #ea4a36;
+  float: left;
+}
+#wrapper #header .headButtom .headButtomMain .search input:last-child {
+  width: 68px;
+  height: 32px;
+  background-color: #ea4a36;
+  color: #fff;
+  float: left;
+  border: none;
+}
+#wrapper #header .headButtom .headButtomMain .search input::-webkit-input-placeholder {
+  color: yellow;
+}
+#wrapper #nav {
+  border-bottom: 2px solid #e1251b;
+}
+#wrapper #nav .navMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrapper #nav .navMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #nav .navMain a {
+  text-decoration: none;
+  margin: 0 22px;
+  font-size: 16px;
+  color: #333;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+}
+#wrapper #nav .navMain a:first-child {
+  width: 210px;
+  height: 50px;
+  background-color: #e1251b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+  text-align: center;
+}
+#wrapper #content {
+  margin-top: 15px;
+}
+#wrapper #content .contentMain {
+  width: 1200px;
+  margin: 15px auto 0 auto;
+}
+#wrapper #content .contentMain .navPath {
+  padding: 9px 15px 9px 0px;
+  font-style: 0;
+}
+#wrapper #content .contentMain .navPath a {
+  font-style: 12px;
+}
+#wrapper #content .contentMain .navPath i {
+  padding: 0 5px;
+  font-size: 12px;
+}
+#wrapper #content .contentMain #center {
+  margin: 5px 0 15px;
+}
+#wrapper #content .contentMain #center #left {
+  width: 400px;
+  float: left;
+}
+#wrapper #content .contentMain #center #left #leftTop {
+  width: 400px;
+  position: relative;
+}
+#wrapper #content .contentMain #center #left #leftTop #smallPic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #DFDFDF;
+  position: relative;
+}
+#wrapper #content .contentMain #center #left #leftTop #smallPic .mask {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ddd;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#wrapper #content .contentMain #center #left #leftTop #bigPic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ddd;
+  left: 420px;
+  top: 0px;
+  position: absolute;
+  overflow: hidden;
+}
+#wrapper #content .contentMain #center #left #leftTop #bigPic img {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+}
+#wrapper #content .contentMain #center #left #leftBottom {
+  width: 400px;
+  margin-top: 5px;
+}
+#wrapper #content .contentMain #center #left #leftBottom a {
+  float: left;
+  width: 10px;
+  height: 54px;
+  border: 1px solid #ccc;
+  background: #ebebeb;
+  text-align: center;
+  line-height: 54px;
+  text-decoration: none;
+}
+#wrapper #content .contentMain #center #left #leftBottom a:first-child {
+  margin-right: 4px;
+}
+#wrapper #content .contentMain #center #left #leftBottom #picList {
+  float: left;
+  width: 372px;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+}
+#wrapper #content .contentMain #center #left #leftBottom #picList ul {
+  font-size: 0px;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+#wrapper #content .contentMain #center #left #leftBottom #picList ul li {
+  font-size: 12px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding: 2px;
+  margin-right: 20px;
+  display: inline-block;
+}
+#wrapper #content .contentMain #center #left #leftBottom #picList ul li img {
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+#wrapper #content .contentMain #center #right {
+  width: 700px;
+  float: right;
+}
+#wrapper #content .contentMain #center #right .rightTop h3 {
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 15px;
+}
+#wrapper #content .contentMain #center #right .rightTop > p {
+  color: #e12228;
+  margin-top: 15px;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap {
+  margin-top: 10px;
+  line-height: 28px;
+  background: #fee9ec;
+  padding: 7px;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop > span {
+  margin-right: 15px;
+  float: left;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price {
+  float: left;
+  color: #cc1122;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price > span {
+  float: left;
+  font-size: 16px;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price p {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price i {
+  float: left;
+  font-size: 12px;
+  color: #c12;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop > p {
+  float: right;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom {
+  width: 520px;
+  line-height: 28px;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom > span {
+  float: left;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom p {
+  float: left;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom p > span {
+  float: left;
+  color: #999;
+}
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceButtom p > span:first-child {
+  float: left;
+  background: #c81623;
+  padding: 3px;
+  color: #fff;
+}
